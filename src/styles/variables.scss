@@ -1,5 +1,6 @@
 // colors
 $gray: #8c97ac12;
+$lightgray: #fafbfc;
 $blue: #2d70fd;
 
 // borders
@@ -14,6 +15,9 @@ $border: 1px solid #f1f4f4;
 }
 .bg-blue {
   background-color: $blue;
+}
+.bg-lightgray {
+  background-color: $lightgray;
 }
 
 // text colors

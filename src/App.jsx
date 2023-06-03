@@ -14,7 +14,7 @@ function App() {
           <Navbar />
         </div>
 
-        <div className="container__right-side">
+        <div className="container__right-side bg-lightgray">
           <PageActions />
         </div>
       </div>
