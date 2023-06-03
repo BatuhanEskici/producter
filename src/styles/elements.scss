@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.border-blue {
+  border: 1px solid $blue;
+}
+
+.call-to-action {
+  padding: 8px;
+  border-radius: 4px;
+  max-height: 32px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

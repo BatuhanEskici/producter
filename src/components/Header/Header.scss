@@ -1,0 +1,38 @@
+.header {
+  border: 1px solid #f1f4f4;
+
+  &__logo-wrapper {
+    padding: 12px 18px 12px 14px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 12px 24px;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    &-input {
+      border: none;
+      outline: none;
+      background-color: unset;
+      margin-left: 4px;
+      font-size: 12px;
+    }
+  }
+
+  &__controls,
+  &__filter {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,18 @@
+@import './styles/elements.scss';
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+
+  &__left-side {
+    width: 12.847222222222221%;
+  }
+
+  &__right-side {
+    flex-grow: 1;
+  }
+}
