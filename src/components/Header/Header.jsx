@@ -28,13 +28,13 @@ function Header() {
                 />
               </div>
 
-              <div className="header__controls">
+              <div className="header__controls ml-2">
                 <button className="call-to-action bg-gray">
                   <img src={controls} alt="controls" className="icon" />
                 </button>
               </div>
 
-              <div className="header__filter">
+              <div className="header__filter ml-2">
                 <button className="call-to-action bg-gray">
                   <img src={filter} alt="filter" className="icon" />
                 </button>

@@ -1,7 +1,7 @@
 import './Navbar.scss';
 import home from '../../assets/icons/home.svg';
 import chat from '../../assets/icons/chat.svg';
-import dashboard from '../../assets/icons/dashboard.svg';
+import dashboardWhite from '../../assets/icons/dashboard-white.svg';
 import explore from '../../assets/icons/explore.svg';
 import repeat from '../../assets/icons/repeat.svg';
 import plus from '../../assets/icons/plus.svg';
@@ -24,7 +24,7 @@ function Navbar() {
             Feedback
           </li>
           <li className="nav__item active">
-            <img src={dashboard} alt="task" />
+            <img src={dashboardWhite} alt="task" />
             Task
           </li>
           <li className="nav__item">

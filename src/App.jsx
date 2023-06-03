@@ -2,6 +2,7 @@ import './styles/reset.css';
 import './App.scss';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import PageActions from './components/PageActions/PageActions';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
           <Navbar />
         </div>
 
-        <div className="container__right-side"></div>
+        <div className="container__right-side">
+          <PageActions />
+        </div>
       </div>
     </div>
   );

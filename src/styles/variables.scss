@@ -4,3 +4,60 @@ $blue: #2d70fd;
 
 // borders
 $border: 1px solid #f1f4f4;
+.border-blue {
+  border: 1px solid $blue;
+}
+
+// background colors
+.bg-gray {
+  background-color: $gray;
+}
+.bg-blue {
+  background-color: $blue;
+}
+
+// text colors
+.color-blue {
+  color: $blue;
+}
+.color-black {
+  color: black;
+}
+
+@mixin generatePropertyByRem($prefix, $property) {
+  $sizes: 0, 0.25, 0.5, 1, 1.5, 3;
+  $spacing: 1rem;
+
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size;
+    }
+  }
+}
+
+@mixin generatePropertyByNumber($prefix, $property) {
+  $numbers: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+  @for $i from 1 through length($numbers) {
+    $number: nth($numbers, $i);
+
+    .#{$prefix}-#{$number} {
+      #{$property}: $number;
+    }
+  }
+}
+
+// spaces
+@include generatePropertyByRem(mt, margin-top);
+@include generatePropertyByRem(mr, margin-right);
+@include generatePropertyByRem(ml, margin-left);
+@include generatePropertyByRem(mb, margin-bottom);
+@include generatePropertyByRem(pt, padding-top);
+@include generatePropertyByRem(pr, padding-right);
+@include generatePropertyByRem(pl, padding-left);
+@include generatePropertyByRem(pb, padding-bottom);
+
+// font weights
+@include generatePropertyByNumber(fw, font-weight);

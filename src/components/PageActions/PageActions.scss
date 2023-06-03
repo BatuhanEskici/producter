@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.page-actions {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $border;
+
+  &__left-side,
+  &__right-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right-side {
+    .call-to-action {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .page-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 4px;
+    cursor: pointer;
+    letter-spacing: 0.25px;
+
+    &--with-border {
+      border-left: $border;
+      padding: 0 12px;
+    }
+  }
+}
