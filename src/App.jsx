@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import PageActions from './components/PageActions/PageActions';
+import Tasks from './components/Tasks/Tasks';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
 
         <div className="container__right-side bg-lightgray">
           <PageActions />
+
+          <Tasks />
         </div>
       </div>
     </div>

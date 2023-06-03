@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+
+.tasks {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__wrapper {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    border: $border;
+    width: 290px;
+
+    &--header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: $border;
+
+      .call-to-action {
+        cursor: default;
+      }
+    }
+
+    &--title {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__task {
+    margin-top: 16px;
+    padding: 12px;
+    border: $border;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--name {
+      display: flex;
+      align-items: center;
+    }
+
+    &--infos {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--point {
+      border: $border;
+      border-radius: 4px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .task--infos__right--side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}

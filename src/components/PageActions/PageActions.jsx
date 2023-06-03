@@ -15,29 +15,29 @@ function PageActions() {
           <img src={ArrowLeft} alt="arrow left" />
         </button>
 
-        <div className="page-action page-action--with-border fw-300">
+        <div className="page-actions__item page-actions__item--with-border fw-300">
           <img src={sandWatch} alt="sand watch" />
           SPR-06
         </div>
 
-        <div className="page-action page-action--with-border fw-300">
+        <div className="page-actions__item page-actions__item--with-border fw-300">
           <img src={peopleBlue} alt="people" />
           TEAM-10
         </div>
 
-        <div className="page-action page-action--with-border color-black fw-500">
+        <div className="page-actions__item page-actions__item--with-border color-black fw-500">
           New Sprint Name
         </div>
 
-        <div className="page-action ml-1">
+        <div className="page-actions__item ml-1">
           <img src={calendarRed} alt="calendar" />
         </div>
 
-        <div className="page-action ml-3">
+        <div className="page-actions__item ml-3">
           <img src={people} alt="people" />
         </div>
 
-        <div className="page-action">
+        <div className="page-actions__item">
           <button className="call-to-action call-to-action--padding-x-12 bg-gray color-blue fw-500 ml-3">
             Complete Sprint
           </button>
@@ -45,13 +45,13 @@ function PageActions() {
       </div>
 
       <div className="page-actions__right-side">
-        <div className="page-action page-action--with-border">
+        <div className="page-actions__item page-actions__item--with-border">
           <button className="call-to-action call-to-action--icon call-to-action--icon--smaller bg-gray">
             <img src={dashboard} alt="dashboard" />
           </button>
         </div>
 
-        <div className="page-action ml-2">
+        <div className="page-actions__item ml-2">
           <button className="call-to-action call-to-action--icon call-to-action--icon--smaller bg-blue">
             <img src={chart} alt="chart" />
           </button>
