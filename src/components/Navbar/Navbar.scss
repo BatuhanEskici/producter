@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+.nav {
+  border-right: 1px solid #f1f4f4;
+  min-height: calc(100vh - 57px);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__items {
+    padding: 0 4px;
+  }
+
+  &__item {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:not(.nav__item:first-child):not(.nav__item--company-info) {
+      margin-top: 4px;
+    }
+
+    &.active {
+      background-color: $blue;
+      color: white;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        border-radius: 1.5px;
+        position: absolute;
+        top: 50%;
+        right: 13.5px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--company-info {
+      border-top: 1px solid #f1f4f4;
+      padding: 16px 8px;
+      height: unset;
+
+      &:last-child {
+        padding-bottom: 6px;
+      }
+    }
+  }
+}

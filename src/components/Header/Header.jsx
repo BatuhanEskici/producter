@@ -3,13 +3,13 @@ import logo from '../../assets/images/logo.svg';
 import search from '../../assets/icons/search.svg';
 import controls from '../../assets/icons/controls.svg';
 import filter from '../../assets/icons/filter.svg';
-import plus from '../../assets/icons/plus.svg';
+import plusBlue from '../../assets/icons/plus-blue.svg';
 
 function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="contaner__left-side">
+        <div className="container__left-side">
           <div className="header__logo-wrapper">
             <img src={logo} alt="logo" className="header__logo" />
           </div>
@@ -43,7 +43,7 @@ function Header() {
 
             <div className="header__add-task">
               <button className="call-to-action border-blue">
-                <img src={plus} alt="plus" className="icon" />
+                <img src={plusBlue} alt="plus" className="icon" />
               </button>
             </div>
           </div>

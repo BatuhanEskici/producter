@@ -47,3 +47,9 @@ button {
   border: none;
   cursor: pointer;
 }
+ul {
+  padding: unset;
+}
+li {
+  list-style-type: none;
+}
