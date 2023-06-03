@@ -7,6 +7,11 @@
   height: 32px;
   display: flex;
   align-items: center;
+  letter-spacing: 0.25px;
+
+  &--padding-x-12 {
+    padding: 8px 12px;
+  }
 }
 
 .icon {
