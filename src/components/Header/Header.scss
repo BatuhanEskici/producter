@@ -33,6 +33,11 @@
       margin-left: 4px;
       font-size: 12px;
       width: 164px;
+
+      &::placeholder {
+        font-weight: 300;
+        letter-spacing: 0.25px;
+      }
     }
   }
 }
