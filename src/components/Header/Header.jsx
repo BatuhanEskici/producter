@@ -19,7 +19,7 @@ function Header() {
           <div className="header__items">
             <div className="header__filters">
               <div className="header__search call-to-action bg-gray">
-                <img src={search} alt="search" className="icon" />
+                <img src={search} alt="search" />
 
                 <input
                   type="text"
@@ -29,13 +29,13 @@ function Header() {
               </div>
 
               <div className="header__controls ml-2">
-                <button className="call-to-action bg-gray">
+                <button className="call-to-action call-to-action--icon bg-gray">
                   <img src={controls} alt="controls" className="icon" />
                 </button>
               </div>
 
               <div className="header__filter ml-2">
-                <button className="call-to-action bg-gray">
+                <button className="call-to-action call-to-action--icon bg-gray">
                   <img src={filter} alt="filter" className="icon" />
                 </button>
               </div>

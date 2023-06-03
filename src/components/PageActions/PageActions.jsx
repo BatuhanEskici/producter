@@ -46,13 +46,13 @@ function PageActions() {
 
       <div className="page-actions__right-side">
         <div className="page-action page-action--with-border">
-          <button className="call-to-action call-to-action bg-gray">
+          <button className="call-to-action call-to-action--icon call-to-action--icon--smaller bg-gray">
             <img src={dashboard} alt="dashboard" />
           </button>
         </div>
 
         <div className="page-action ml-2">
-          <button className="call-to-action call-to-action bg-blue">
+          <button className="call-to-action call-to-action--icon call-to-action--icon--smaller bg-blue">
             <img src={chart} alt="chart" />
           </button>
         </div>
