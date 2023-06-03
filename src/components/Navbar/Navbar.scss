@@ -3,7 +3,7 @@
 .nav {
   border-right: $border;
   min-height: calc(100vh - 57px);
-  padding: 12px;
+  padding: 24px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,7 +23,7 @@
     white-space: nowrap;
 
     &:not(.nav__item:first-child):not(.nav__item--company-info) {
-      margin-top: 4px;
+      margin-top: 8px;
     }
 
     &.active {
@@ -48,6 +48,10 @@
       border-top: $border;
       padding: 16px 8px;
       height: unset;
+
+      &:not(.nav__item--company-info:last-child) {
+        margin-top: 8px;
+      }
 
       &:last-child {
         padding-bottom: 6px;

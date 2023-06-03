@@ -11,7 +11,7 @@ function PageActions() {
   return (
     <section className="page-actions">
       <div className="page-actions__left-side">
-        <button className="mr-4">
+        <button className="mr-3">
           <img src={ArrowLeft} alt="arrow left" />
         </button>
 
@@ -29,11 +29,11 @@ function PageActions() {
           New Sprint Name
         </div>
 
-        <div className="page-action">
+        <div className="page-action ml-1">
           <img src={calendarRed} alt="calendar" />
         </div>
 
-        <div className="page-action ml-2">
+        <div className="page-action ml-3">
           <img src={people} alt="people" />
         </div>
 
