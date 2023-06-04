@@ -42,6 +42,7 @@ function App() {
   const addTaskToTheTaskList = (task) => {
     dispatch(createTask(task));
     dispatch(addTaskToColumn(task));
+    handleCreateTaskModalAction(false);
   };
 
   const context = { handleCreateTaskModalAction, addTaskToTheTaskList };

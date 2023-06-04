@@ -2,8 +2,9 @@ import './CreateTask.scss';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useSelector } from 'react-redux';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppContext } from '../../App';
+import { v4 as uuid } from 'uuid';
 
 const style = {
   position: 'absolute',
@@ -22,6 +23,7 @@ const style = {
 function CreateTask() {
   const isActive = useSelector((state) => state.createTaskModal);
   const context = useContext(AppContext);
+  const [name, setName] = useState('');
 
   return (
     <div>
@@ -39,15 +41,21 @@ function CreateTask() {
 
             <br />
 
-            <input type="text" className="mt-2 bg-gray call-to-action" />
+            <input
+              type="text"
+              className="mt-2 bg-gray call-to-action"
+              onInput={(event) => {
+                setName(event.target.value);
+              }}
+            />
 
             <div className="create-issue__button-wrapper mt-4">
               <button
                 className="call-to-action bg-gray color-blue"
                 onClick={() => {
                   context.addTaskToTheTaskList({
-                    id: '5',
-                    content: 'Fifth task',
+                    id: `${uuid()}`,
+                    content: name,
                   });
                 }}
               >
