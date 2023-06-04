@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 .create-issue {
+  font-size: 13px;
+
   &__form-element {
     display: flex;
     flex-direction: column;
