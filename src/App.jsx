@@ -5,8 +5,8 @@ import Navbar from './components/Navbar/Navbar';
 import PageActions from './components/PageActions/PageActions';
 import Tasks from './components/Tasks/Tasks';
 import { useEffect, useState, createContext } from 'react';
-import { updateTasks } from './store/tasks';
-import { updateColumns } from './store/columns';
+import { updateTasks, createTask } from './store/tasks';
+import { updateColumns, addTaskToColumn } from './store/columns';
 import { useDispatch } from 'react-redux';
 import CreateTask from './components/CreateTask/CreateTask';
 import { updateCreateTaskModal } from './store/createTaskModal';
@@ -44,7 +44,12 @@ function App() {
     dispatch(updateCreateTaskModal(status));
   };
 
-  const context = { handleCreateTaskModalAction };
+  const addTaskToTheTaskList = (task) => {
+    dispatch(createTask(task));
+    dispatch(addTaskToColumn(task));
+  };
+
+  const context = { handleCreateTaskModalAction, addTaskToTheTaskList };
 
   return (
     <div className="App">

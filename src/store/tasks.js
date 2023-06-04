@@ -10,8 +10,11 @@ const tasks = createSlice({
       state = action.payload;
       return state;
     },
+    createTask: (state, action) => {
+      state.push(action.payload);
+    },
   },
 });
 
-export const { updateTasks } = tasks.actions;
+export const { updateTasks, createTask } = tasks.actions;
 export default tasks.reducer;

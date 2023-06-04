@@ -19,8 +19,11 @@ const columns = createSlice({
       state = action.payload;
       return state;
     },
+    addTaskToColumn: (state, action) => {
+      state['column-1'].items.push(action.payload);
+    },
   },
 });
 
-export const { updateColumns } = columns.actions;
+export const { updateColumns, addTaskToColumn } = columns.actions;
 export default columns.reducer;

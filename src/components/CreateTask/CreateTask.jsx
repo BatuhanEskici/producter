@@ -10,7 +10,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '50%',
+  width: '20%',
   bgcolor: 'background.paper',
   boxShadow: 4,
   p: 4,
@@ -41,8 +41,16 @@ function CreateTask() {
 
             <input type="text" className="mt-2 bg-gray call-to-action" />
 
-            <div className="create-issue__button">
-              <button className="call-to-action bg-gray color-blue">
+            <div className="create-issue__button-wrapper mt-4">
+              <button
+                className="call-to-action bg-gray color-blue"
+                onClick={() => {
+                  context.addTaskToTheTaskList({
+                    id: '5',
+                    content: 'Fifth task',
+                  });
+                }}
+              >
                 Create
               </button>
             </div>

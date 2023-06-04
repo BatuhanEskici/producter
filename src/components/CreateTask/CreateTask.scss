@@ -3,9 +3,10 @@
   input {
     border: $border;
     outline: 0;
+    width: 100%;
   }
 
-  &__button {
+  &__button-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
