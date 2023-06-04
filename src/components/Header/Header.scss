@@ -5,13 +5,9 @@
   border-bottom: $border;
 
   &__logo-wrapper {
-    padding: 0 18px;
+    padding: 0 18px 0 14px;
     border-right: $border;
     cursor: pointer;
-  }
-
-  &__logo {
-    transform: scale(1.02);
   }
 
   &__items {

@@ -21,6 +21,7 @@
     border-radius: 4px;
     cursor: pointer;
     white-space: nowrap;
+    letter-spacing: 0.25px;
 
     &:not(.nav__item:first-child):not(.nav__item--company-info) {
       margin-top: 8px;

@@ -38,7 +38,7 @@ function PageActions() {
         </div>
 
         <div className="page-actions__item">
-          <button className="call-to-action call-to-action--padding-x-12 bg-gray color-blue fw-500 ml-3">
+          <button className="call-to-action call-to-action--padding-x-12 bg-gray color-blue fw-500 ml-4">
             Complete Sprint
           </button>
         </div>

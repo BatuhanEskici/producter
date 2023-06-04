@@ -40,7 +40,12 @@ function Header() {
 
               <div className="header__filter ml-2">
                 <button className="call-to-action call-to-action--icon bg-gray">
-                  <img src={filter} alt="filter" className="icon" />
+                  <img
+                    src={filter}
+                    alt="filter"
+                    className="icon"
+                    style={{ width: '75%', height: '75%' }}
+                  />
                 </button>
               </div>
             </div>
