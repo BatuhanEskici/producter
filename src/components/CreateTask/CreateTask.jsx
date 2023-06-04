@@ -32,6 +32,11 @@ function CreateTask() {
       return;
     }
 
+    if (isNaN(Number(point))) {
+      alert('Point should be number');
+      return;
+    }
+
     context.addTaskToTheTaskList({
       id: `${uuid()}`,
       name,
