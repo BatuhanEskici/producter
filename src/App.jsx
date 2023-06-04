@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { updateTasks } from './store/tasks';
 import { updateColumns } from './store/columns';
 import { useDispatch } from 'react-redux';
+import CreateIssue from './components/CreateIssue/CreateIssue';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +20,6 @@ function App() {
       { id: '2', content: 'Second task' },
       { id: '3', content: 'Third task' },
       { id: '4', content: 'Fourth task' },
-      { id: '5', content: 'Fifth task' },
     ];
     const columns = {
       'column-1': {
@@ -48,6 +48,8 @@ function App() {
 
         <div className="container__right-side bg-lightgray">
           <PageActions />
+
+          <CreateIssue />
 
           {!isLoading && <Tasks />}
         </div>
