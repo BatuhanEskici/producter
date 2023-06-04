@@ -107,7 +107,7 @@ function Tasks() {
                                     className="tasks__task"
                                   >
                                     <p className="tasks__task--description color-black">
-                                      {item.content}
+                                      {item.name}
                                     </p>
 
                                     <div className="tasks__task--infos">
@@ -130,7 +130,7 @@ function Tasks() {
                                         />
 
                                         <div className="tasks__task--point color-black">
-                                          8
+                                          {item.point}
                                         </div>
 
                                         <img src={profilePhoto} alt="profile" />

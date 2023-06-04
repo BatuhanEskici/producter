@@ -24,6 +24,7 @@ function CreateTask() {
   const isActive = useSelector((state) => state.createTaskModal);
   const context = useContext(AppContext);
   const [name, setName] = useState('');
+  const [point, setPoint] = useState('');
 
   return (
     <div>
@@ -37,17 +38,29 @@ function CreateTask() {
       >
         <Box sx={style}>
           <div className="create-issue">
-            <label>Name</label>
+            <div className="create-issue__form-element">
+              <label>Name</label>
 
-            <br />
+              <input
+                type="text"
+                className="mt-2 bg-gray call-to-action"
+                onInput={(event) => {
+                  setName(event.target.value);
+                }}
+              />
+            </div>
 
-            <input
-              type="text"
-              className="mt-2 bg-gray call-to-action"
-              onInput={(event) => {
-                setName(event.target.value);
-              }}
-            />
+            <div className="create-issue__form-element mt-3">
+              <label>Point</label>
+
+              <input
+                type="text"
+                className="mt-2 bg-gray call-to-action"
+                onInput={(event) => {
+                  setPoint(event.target.value);
+                }}
+              />
+            </div>
 
             <div className="create-issue__button-wrapper mt-4">
               <button
@@ -55,7 +68,8 @@ function CreateTask() {
                 onClick={() => {
                   context.addTaskToTheTaskList({
                     id: `${uuid()}`,
-                    content: name,
+                    name,
+                    point,
                   });
                 }}
               >
