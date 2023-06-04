@@ -18,12 +18,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const tasks = [
-      { id: '1', content: 'First task' },
-      { id: '2', content: 'Second task' },
-      { id: '3', content: 'Third task' },
-      { id: '4', content: 'Fourth task' },
-    ];
+    const tasks = [];
     const columns = {
       'column-1': {
         name: 'To Do',
