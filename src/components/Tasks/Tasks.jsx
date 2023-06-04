@@ -73,11 +73,13 @@ function Tasks() {
                   <span className="fw-500 color-black">{column.name}</span>
                 </div>
 
-                <div className="tasks__wrapper--count">
-                  <button className="bg-gray color-blue">
-                    {getTotalTaskPointByColumn(column.items)}
-                  </button>
-                </div>
+                {column.items.length > 0 && (
+                  <div className="tasks__wrapper--count">
+                    <button className="bg-gray color-blue">
+                      {getTotalTaskPointByColumn(column.items)}
+                    </button>
+                  </div>
+                )}
               </div>
 
               <div>
