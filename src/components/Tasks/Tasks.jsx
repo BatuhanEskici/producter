@@ -71,9 +71,7 @@ function Tasks() {
                 </div>
 
                 <div className="tasks__wrapper--count">
-                  <button className="call-to-action call-to-action-icon bg-gray color-blue">
-                    72
-                  </button>
+                  <button className="bg-gray color-blue">72</button>
                 </div>
               </div>
 

@@ -12,13 +12,13 @@
     border-radius: 8px;
     border: $border;
     width: 290px;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 156px);
 
     &--header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 16px;
+      padding-bottom: 8px;
       margin-bottom: 16px;
       border-bottom: $border;
 
@@ -33,6 +33,12 @@
 
       span {
         font-size: 16px;
+      }
+    }
+
+    &--count {
+      button {
+        padding: 2px 4px;
       }
     }
   }

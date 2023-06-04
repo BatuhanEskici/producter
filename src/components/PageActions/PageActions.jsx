@@ -51,7 +51,7 @@ function PageActions() {
           </button>
         </div>
 
-        <div className="page-actions__item ml-2">
+        <div className="page-actions__item">
           <button className="call-to-action call-to-action--icon call-to-action--icon--smaller bg-blue">
             <img src={chart} alt="chart" />
           </button>
