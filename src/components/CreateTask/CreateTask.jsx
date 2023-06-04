@@ -1,7 +1,9 @@
-import './CreateIssue.scss';
-import * as React from 'react';
+import './CreateTask.scss';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { AppContext } from '../../App';
 
 const style = {
   position: 'absolute',
@@ -10,7 +12,6 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '50%',
   bgcolor: 'background.paper',
-  border: '2px solid #000',
   boxShadow: 4,
   p: 4,
   outline: 0,
@@ -18,11 +19,17 @@ const style = {
   borderRadius: '8px',
 };
 
-function CreateIssue() {
+function CreateTask() {
+  const isActive = useSelector((state) => state.createTaskModal);
+  const context = useContext(AppContext);
+
   return (
     <div>
       <Modal
-        open={false}
+        open={isActive}
+        onClose={() => {
+          context.handleCreateTaskModalAction(false);
+        }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -46,4 +53,4 @@ function CreateIssue() {
   );
 }
 
-export default CreateIssue;
+export default CreateTask;

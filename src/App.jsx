@@ -4,11 +4,14 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import PageActions from './components/PageActions/PageActions';
 import Tasks from './components/Tasks/Tasks';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import { updateTasks } from './store/tasks';
 import { updateColumns } from './store/columns';
 import { useDispatch } from 'react-redux';
-import CreateIssue from './components/CreateIssue/CreateIssue';
+import CreateTask from './components/CreateTask/CreateTask';
+import { updateCreateTaskModal } from './store/createTaskModal';
+
+export const AppContext = createContext();
 
 function App() {
   const dispatch = useDispatch();
@@ -37,23 +40,31 @@ function App() {
     setIsLoading(false);
   }, [dispatch]);
 
+  const handleCreateTaskModalAction = (status) => {
+    dispatch(updateCreateTaskModal(status));
+  };
+
+  const context = { handleCreateTaskModalAction };
+
   return (
     <div className="App">
-      <Header />
+      <AppContext.Provider value={context}>
+        <Header />
 
-      <div className="container">
-        <div className="container__left-side">
-          <Navbar />
+        <div className="container">
+          <div className="container__left-side">
+            <Navbar />
+          </div>
+
+          <div className="container__right-side bg-lightgray">
+            <PageActions />
+
+            <CreateTask />
+
+            {!isLoading && <Tasks />}
+          </div>
         </div>
-
-        <div className="container__right-side bg-lightgray">
-          <PageActions />
-
-          <CreateIssue />
-
-          {!isLoading && <Tasks />}
-        </div>
-      </div>
+      </AppContext.Provider>
     </div>
   );
 }

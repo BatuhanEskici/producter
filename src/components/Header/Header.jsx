@@ -4,8 +4,12 @@ import search from '../../assets/icons/search.svg';
 import controls from '../../assets/icons/controls.svg';
 import filter from '../../assets/icons/filter.svg';
 import plusBlue from '../../assets/icons/plus-blue.svg';
+import { useContext } from 'react';
+import { AppContext } from '../../App';
 
 function Header() {
+  const context = useContext(AppContext);
+
   return (
     <header className="header">
       <div className="container">
@@ -42,7 +46,12 @@ function Header() {
             </div>
 
             <div className="header__add-task">
-              <button className="call-to-action border-blue">
+              <button
+                className="call-to-action border-blue"
+                onClick={() => {
+                  context.handleCreateTaskModalAction(true);
+                }}
+              >
                 <img src={plusBlue} alt="plus" className="icon" />
               </button>
             </div>
