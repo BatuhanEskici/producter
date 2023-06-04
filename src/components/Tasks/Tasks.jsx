@@ -3,36 +3,9 @@ import circleHole from '../../assets/icons/circle-hole.svg';
 import dashboardYellow from '../../assets/icons/dashboard-yellow.svg';
 import chartLevelThree from '../../assets/icons/chart-level-three.svg';
 import profilePhoto from '../../assets/images/profile-photo.png';
-
-import { useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-
-const tasks = [
-  { id: '1', content: 'First task' },
-  { id: '2', content: 'Second task' },
-  { id: '3', content: 'Third task' },
-  { id: '4', content: 'Fourth task' },
-  { id: '5', content: 'Fifth task' },
-];
-
-const taskColumns = {
-  'column-1': {
-    name: 'Requested',
-    items: tasks,
-  },
-  'column-2': {
-    name: 'To do',
-    items: [],
-  },
-  'column-3': {
-    name: 'In Progress',
-    items: [],
-  },
-  'column-4': {
-    name: 'Done',
-    items: [],
-  },
-};
+import { useSelector, useDispatch } from 'react-redux';
+import { updateColumns } from '../../store/columns';
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
@@ -72,7 +45,11 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 function Tasks() {
-  const [columns, setColumns] = useState(taskColumns);
+  const dispatch = useDispatch();
+  const columns = useSelector((state) => state.columns);
+  const setColumns = (updatedColumns) => {
+    dispatch(updateColumns(updatedColumns));
+  };
 
   return (
     <section className="tasks">
