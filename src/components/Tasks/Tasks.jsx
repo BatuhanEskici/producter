@@ -50,6 +50,9 @@ function Tasks() {
   const setColumns = (updatedColumns) => {
     dispatch(updateColumns(updatedColumns));
   };
+  const getTotalTaskPointByColumn = (items) => {
+    return items.reduce((total, task) => total + Number(task.point), 0);
+  };
 
   return (
     <section className="tasks">
@@ -71,7 +74,9 @@ function Tasks() {
                 </div>
 
                 <div className="tasks__wrapper--count">
-                  <button className="bg-gray color-blue">72</button>
+                  <button className="bg-gray color-blue">
+                    {getTotalTaskPointByColumn(column.items)}
+                  </button>
                 </div>
               </div>
 
