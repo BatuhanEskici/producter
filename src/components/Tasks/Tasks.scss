@@ -12,12 +12,14 @@
     border-radius: 8px;
     border: $border;
     width: 290px;
+    min-height: calc(100vh - 170px);
 
     &--header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding-bottom: 16px;
+      margin-bottom: 16px;
       border-bottom: $border;
 
       .call-to-action {
@@ -31,8 +33,11 @@
     }
   }
 
+  &__droppable-area {
+    min-height: calc(100vh - 293px);
+  }
+
   &__task {
-    margin-top: 16px;
     padding: 12px;
     border: $border;
     border-radius: 4px;
