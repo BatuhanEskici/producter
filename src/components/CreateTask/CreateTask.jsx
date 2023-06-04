@@ -26,6 +26,22 @@ function CreateTask() {
   const [name, setName] = useState('');
   const [point, setPoint] = useState('');
 
+  const handleCreateTaskClick = () => {
+    if (!name || !point) {
+      alert('Please fill all inputs');
+      return;
+    }
+
+    context.addTaskToTheTaskList({
+      id: `${uuid()}`,
+      name,
+      point,
+    });
+
+    setName('');
+    setPoint('');
+  };
+
   return (
     <div>
       <Modal
@@ -65,13 +81,7 @@ function CreateTask() {
             <div className="create-issue__button-wrapper mt-4">
               <button
                 className="call-to-action bg-gray color-blue"
-                onClick={() => {
-                  context.addTaskToTheTaskList({
-                    id: `${uuid()}`,
-                    name,
-                    point,
-                  });
-                }}
+                onClick={handleCreateTaskClick}
               >
                 Create
               </button>
